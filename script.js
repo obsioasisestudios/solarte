@@ -262,6 +262,15 @@ function initSite() {
             }
         });
     });
+
+    // Close menu when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth < 992) {
+            if (!e.target.closest('.nav-links') && !e.target.closest('.nav-toggle')) {
+                navLinks.classList.remove('active');
+            }
+        }
+    });
     
     // Theme toggle (dark/light mode)
     const themeToggle = document.querySelector('.theme-toggle');
@@ -485,11 +494,31 @@ function initSite() {
             
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
+                const offset = window.innerWidth < 768 ? 60 : 80;
                 window.scrollTo({
-                    top: target.offsetTop - 80,
+                    top: target.offsetTop - offset,
                     behavior: 'smooth'
                 });
             }
         });
     });
+
+    // Mobile touch improvements
+    if (window.innerWidth < 768) {
+        // Improve touch targets
+        const touchElements = document.querySelectorAll('.gallery-item, .artist-card, .filter-btn, .cta-button');
+        touchElements.forEach(element => {
+            element.style.minHeight = '44px'; // iOS minimum touch target
+        });
+
+        // Prevent zoom on double tap
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    }
 }
