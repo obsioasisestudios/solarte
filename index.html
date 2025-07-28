@@ -1,0 +1,336 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarteXX | Estudio de Tatuajes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/index.js",
+                "ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/ScrollTrigger.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Loader Animation -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-circuit"></div>
+            <div class="energy-rings">
+                <div class="ring ring1"></div>
+                <div class="ring ring2"></div>
+                <div class="ring ring3"></div>
+            </div>
+            <div class="loader-spark spark1"></div>
+            <div class="loader-spark spark2"></div>
+            <div class="loader-spark spark3"></div>
+            <div id="loader-text">
+                <div id="loader-title">SolarteXX</div>
+                <div id="loader-subtitle">TATTOO</div>
+            </div>
+            <div id="loader-progress">0%</div>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">SolarteXX</div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#artists">Artistas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Arte en tu piel</h1>
+                    <p>Diseños únicos que definen tu estilo</p>
+                    <p class="hero-artist">por Daniel Solarte</p>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://scontent.fnva1-1.fna.fbcdn.net/v/t39.30808-6/474737314_1804933860319490_8849979028381610446_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFQYQOanlTTJdP-ik8gjnQl-8CvXW0CnHr7wK9dbQKcemnSSxM7rBG9fKMKKKxSyBMod4z7sQ5cwF9OvD8ARijJ&_nc_ohc=G3mMpsj1r_MQ7kNvwEXsSv3&_nc_oc=AdkErWskoxioWkc8xk5Tf-inYQQ6I1K8-iaL4NoT0wa80h-CvGVPItQdibX9ms042Ms&_nc_zt=23&_nc_ht=scontent.fnva1-1.fna&_nc_gid=iYkQibSuqAz6epQZJkvtEA&oh=00_AfQSPLzeV8xYMAR-OQHIPooCiX9cgWB6ed2JwkpkTaiTWA&oe=688D86F4" alt="Daniel Solarte" class="hero-artist-photo">
+                </div>
+
+                <!-- Eye banner moved here -->
+                <div class="eye-banner">
+                    <svg class="eye-svg" viewBox="0 0 100 50">
+                        <path class="eye-outline" d="M5,25 Q50,0 95,25 Q50,50 5,25 Z" />
+                        <circle class="eye-iris" cx="50" cy="25" r="12" />
+                        <circle class="eye-pupil" cx="50" cy="25" r="6" />
+                        <circle class="eye-highlight" cx="45" cy="20" r="3" />
+                    </svg>
+                </div>
+
+                <button class="cta-button">Reserva tu sesión</button>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <h2>Nuestros Trabajos</h2>
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="realismo">Realismo</button>
+                <button class="filter-btn" data-category="minimalista">Minimalista</button>
+                <button class="filter-btn" data-category="geometrico">Geométrico</button>
+                <button class="filter-btn" data-category="tradicional">Tradicional</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- Realismo -->
+                <div class="gallery-item" data-category="realismo" data-image="images/retrato-realista.jpg">
+                    <div class="item-inner">
+                        <img src="https://scontent.fnva1-1.fna.fbcdn.net/v/t51.75761-15/496823786_18325435327203694_3776889898462588947_n.jpg?stp=dst-jpegr_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHBKFCIcgcb_WIrA6vwP1oLXvVBUx7cGQBe9UFTHtwZAPa-Qnyv1ci5UMzAwlT49FD3pHK-wTcJQJFHFbXQl8IY&_nc_ohc=OwYCBCnxxDMQ7kNvwEQ1gVe&_nc_oc=Adn8ltGJo-HwmY5WheiTSU4BH6pvJrwrrYiRGc1icm09oL5P0K9GA8BBd66-6G2jEU4&_nc_zt=23&se=-1&_nc_ht=scontent.fnva1-1.fna&_nc_gid=yZJyHRDU7R7YrsY76aedog&oh=00_AfQlQ64E23wfBP42k7kbKAxXxvQZ4Le_K8VuYY5zvnLH2w&oe=688D9B32" alt="Retrato Realista" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="placeholder-svg" width="100%" height="100%" viewBox="0 0 300 300" style="display: none;">
+                            <rect width="100%" height="100%" fill="#2a2a2a" />
+                            <path d="M50,100 C50,72.4 72.4,50 100,50 C127.6,50 150,72.4 150,100 C150,127.6 127.6,150 100,150 C72.4,150 50,127.6 50,100 Z" fill="none" stroke="rgba(255, 0, 255, 0.5)" stroke-width="3" stroke-dasharray="5,3" />
+                        </svg>
+                        <div class="item-details">
+                            <h3>Retrato Realista</h3>
+                            <p>Artista: Daniel Solarte</p>
+                            <span class="view-details">Ver detalles</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Minimalista -->
+                <div class="gallery-item" data-category="minimalista" data-image="images/minimalismo-elegante.jpg">
+                    <div class="item-inner">
+                        <img src="https://scontent.fnva1-1.fna.fbcdn.net/v/t39.30808-6/476780073_1816238605855682_2824660562647499227_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGuumBhJ1_5cWl0_cvgVox7DxOPYd0rWikPE49h3StaKZKNIVeVzuqwctFNTqoft2WSI4Xx2JkE_G33DXWwX6i0&_nc_ohc=PumLy44m59QQ7kNvwGeYRwr&_nc_oc=Adl43Y72buWzT2Ug366yEQNrIi4viXeCLkj1kFQBFQf8R3tzacF97bgebeLUxXqzepM&_nc_zt=23&_nc_ht=scontent.fnva1-1.fna&_nc_gid=4kLpuvTKZO7XDkBvBCVWJQ&oh=00_AfT19jZEmcKo9rFRugEV96ml7pVRvuWRaNPjmXVIFVVI6A&oe=688DA3BE" alt="Minimalismo Elegante" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="placeholder-svg" width="100%" height="100%" viewBox="0 0 300 300" style="display: none;">
+                            <rect width="100%" height="100%" fill="#2a2a2a" />
+                            <line x1="100" y1="150" x2="200" y2="150" stroke="#666" stroke-width="2" />
+                            <circle cx="150" cy="150" r="30" stroke="#666" stroke-width="2" fill="none" />
+                        </svg>
+                        <div class="item-details">
+                            <h3>Minimalismo Elegante</h3>
+                            <p>Artista: Daniel Solarte</p>
+                            <span class="view-details">Ver detalles</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Geométrico -->
+                <div class="gallery-item" data-category="geometrico" data-image="images/patron-geometrico.jpg">
+                    <div class="item-inner">
+                        <img src="https://scontent.fnva1-1.fna.fbcdn.net/v/t1.6435-9/144617871_873945493418336_4284077298151572868_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEzUBEqHHGeawcRMwulklICkA_JkmSDELiQD8mSZIMQuFH98i-HnIavEppSmDZ38DTCtLa1xwnoZhTtGTWkWmMi&_nc_ohc=o8wZd8HhNSMQ7kNvwHDfP3G&_nc_oc=AdkLijEg0GENRmq9aIM6KUcq58HzGEHUmxuvrwnx9Z3Ca7zw6BFt4IcO6MpHoFblid8&_nc_zt=23&_nc_ht=scontent.fnva1-1.fna&_nc_gid=7KrDcwDwbdi0FTDFGuNkoA&oh=00_AfQoA8l9bFmz5ZCRa_S7T4asoxgQquwOy-nmzvsRldsQ-Q&oe=68AF4EC6" alt="Patrón Geométrico" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="placeholder-svg" width="100%" height="100%" viewBox="0 0 300 300" style="display: none;">
+                            <rect width="100%" height="100%" fill="#2a2a2a" />
+                            <polygon points="150,80 190,120 190,180 150,220 110,180 110,120" fill="none" stroke="#666" stroke-width="2" />
+                            <line x1="150" y1="80" x2="150" y2="220" stroke="#666" stroke-width="2" />
+                            <line x1="110" y1="120" x2="190" y2="180" stroke="#666" stroke-width="2" />
+                            <line x1="110" y1="180" x2="190" y2="120" stroke="#666" stroke-width="2" />
+                        </svg>
+                        <div class="item-details">
+                            <h3>Patrón Geométrico</h3>
+                            <p>Artista: Daniel Solarte</p>
+                            <span class="view-details">Ver detalles</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tradicional -->
+                <div class="gallery-item" data-category="tradicional" data-image="images/tradicional-old-school.jpg">
+                    <div class="item-inner">
+                        <img src="https://scontent.fnva1-1.fna.fbcdn.net/v/t39.30808-6/465742743_18303549583203694_4526926759762683690_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHm643fHbJ8aygzpgioIUs9Juy6jnxCWhQm7LqOfEJaFOftwF4eKAjIcisV6ODP8OfSnoU-z150hXDiaouUiUh0&_nc_ohc=Ehh91zykeMIQ7kNvwEKQrv7&_nc_oc=AdnFIHGrzwQn-3DC2xralB7tw4-Q6dBqPKpsYH2uADE1Bqe3d34NWVUIBLHZMVZboy8&_nc_zt=23&_nc_ht=scontent.fnva1-1.fna&_nc_gid=QyIdNV09WPX9KDYbzw_1LA&oh=00_AfREh5YL_HVv568cF8fcmURudK11kgv154WgM305xDNYOQ&oe=688DA469" alt="Tradicional Old School" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="placeholder-svg" width="100%" height="100%" viewBox="0 0 300 300" style="display: none;">
+                            <rect width="100%" height="100%" fill="#2a2a2a" />
+                            <path d="M150,80 C130,80 120,100 120,140 C120,160 150,180 150,200 C150,180 180,160 180,120 C180,100 170,80 150,80 Z" fill="#444" stroke="#666" stroke-width="2" />
+                            <path d="M140,130 L160,130 M150,110 L150,150" stroke="#666" stroke-width="3" />
+                        </svg>
+                        <div class="item-details">
+                            <h3>Tradicional Old School</h3>
+                            <p>Artista: Daniel Solarte</p>
+                            <span class="view-details">Ver detalles</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Más elementos de galería pueden añadirse aquí -->
+                <div class="gallery-item" data-category="realismo" data-image="images/paisaje-natural.jpg">
+                    <div class="item-inner">
+                        <img src="https://scontent.fnva1-1.fna.fbcdn.net/v/t51.75761-15/496409169_18325435345203694_5165493116482933262_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF_kXlu47t0V2JPaTQbtOe1GJC3u2hk76EYkLe7aGTvoTJWLQ3a1XGAnNwxxjIePAjTBovGNLXGe_p2l0mbxv6B&_nc_ohc=WdFGnkjz8qIQ7kNvwFI5E0x&_nc_oc=Adlgzou3aOH9er3xEwrKzxX-x3Nyy2HVB98YcEOHADR1ct29b6e_Asph4vjUvgey0bU&_nc_zt=23&_nc_ht=scontent.fnva1-1.fna&_nc_gid=eNIrSCXBRChy4RxxQsdQMg&oh=00_AfT7d_pRKRjmUthrk1xaUCNRrC2sZjrmS0ZjqFL6AtqT_g&oe=688D79CC" alt="Paisaje Natural" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="placeholder-svg" width="100%" height="100%" viewBox="0 0 300 300" style="display: none;">
+                            <rect width="100%" height="100%" fill="#2a2a2a" />
+                            <circle cx="150" cy="150" r="60" fill="#444" />
+                            <path d="M120,120 Q150,180 180,120" stroke="#666" stroke-width="3" fill="none" />
+                        </svg>
+                        <div class="item-details">
+                            <h3>Paisaje Natural</h3>
+                            <p>Artista: Daniel Solarte</p>
+                            <span class="view-details">Ver detalles</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="geometrico" data-image="images/mandala-moderno.jpg">
+                    <div class="item-inner">
+                        <img src="https://www.facebook.com/photo.php?fbid=1873227946823414&set=pb.100024086809653.-2207520000&type=3" alt="Mandala Moderno" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="placeholder-svg" width="100%" height="100%" viewBox="0 0 300 300" style="display: none;">
+                            <rect width="100%" height="100%" fill="#2a2a2a" />
+                            <rect x="100" y="100" width="100" height="100" fill="none" stroke="#666" stroke-width="2" />
+                            <circle cx="150" cy="150" r="50" fill="none" stroke="#666" stroke-width="2" />
+                            <line x1="100" y1="100" x2="200" y2="200" stroke="#666" stroke-width="2" />
+                            <line x1="200" y1="100" x2="100" y2="200" stroke="#666" stroke-width="2" />
+                        </svg>
+                        <div class="item-details">
+                            <h3>Mandala Moderno</h3>
+                            <p>Artista: Daniel Solarte</p>
+                            <span class="view-details">Ver detalles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artists Section -->
+        <section id="artists" class="artists-section">
+            <h2>Nuestro Artista</h2>
+            <div class="artists-grid">
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://scontent.fnva1-1.fna.fbcdn.net/v/t39.30808-6/474737314_1804933860319490_8849979028381610446_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFQYQOanlTTJdP-ik8gjnQl-8CvXW0CnHr7wK9dbQKcemnSSxM7rBG9fKMKKKxSyBMod4z7sQ5cwF9OvD8ARijJ&_nc_ohc=G3mMpsj1r_MQ7kNvwEXsSv3&_nc_oc=AdkErWskoxioWkc8xk5Tf-inYQQ6I1K8-iaL4NoT0wa80h-CvGVPItQdibX9ms042Ms&_nc_zt=23&_nc_ht=scontent.fnva1-1.fna&_nc_gid=iYkQibSuqAz6epQZJkvtEA&oh=00_AfQSPLzeV8xYMAR-OQHIPooCiX9cgWB6ed2JwkpkTaiTWA&oe=688D86F4" alt="Daniel Solarte" class="artist-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg width="100%" height="100%" viewBox="0 0 200 200" style="display: none;">
+                            <rect width="100%" height="100%" fill="#2a2a2a" />
+                            <circle cx="100" cy="80" r="40" fill="#444" />
+                            <rect x="60" y="120" width="80" height="60" fill="#444" />
+                        </svg>
+                    </div>
+                    <h3>Daniel Solarte</h3>
+                    <p>Artista Tatuador Profesional</p>
+                    <p class="artist-specialties">Especialista en Realismo, Minimalismo, Geométrico y Tradicional</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Isnos Huila</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+57 3152396886</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>https://www.facebook.com/daniel.solarte.54966</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option value="" disabled selected>Tipo de tatuaje</option>
+                            <option value="realismo">Realismo</option>
+                            <option value="minimalista">Minimalista</option>
+                            <option value="geometrico">Geométrico</option>
+                            <option value="tradicional">Tradicional</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Modal for tattoo details -->
+        <div id="tattoo-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-artist"></p>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <!-- SVG placeholder will be replaced with actual image data -->
+                    </div>
+                    <div class="modal-description">
+                        <p id="modal-desc"></p>
+                        <div class="modal-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Estilo:</span>
+                                <span id="modal-style"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Duración:</span>
+                                <span id="modal-duration"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Dificultad:</span>
+                                <div id="modal-difficulty" class="difficulty-meter"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="cta-button">Consultar disponibilidad</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">SolarteXX</div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#gallery">Galería</a></li>
+                        <li><a href="#artists">Artistas</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SolarteXX. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
